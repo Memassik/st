@@ -187,6 +187,8 @@ char *iso14755_cmd = "dmenu -w \"$WINDOWID\" -p codepoint: </dev/null";
  */
 static MouseShortcut mshortcuts[] = {
     /* mask                 button   function        argument       release */
+    { ShiftMask,            Button4, kscrollup,      {.f = -0.1} },
+    { ShiftMask,            Button5, kscrolldown,    {.f = -0.1} },
     {XK_ANY_MOD, Button2, selpaste, {.i = 0}, 1},
     {ShiftMask, Button4, ttysend, {.s = "\033[5;2~"}},
     {XK_ANY_MOD, Button4, ttysend, {.s = "\031"}},
